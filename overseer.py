@@ -30,13 +30,13 @@ def findJobs():
             skills =  job.find('span' , class_ = 'srp-skills').text.replace(' ', '')
             job_apply = job.header.h2.a['href']
 
-            #OH MY GOD NOT IS HERE AS WELL. GODAYAMMMMMMM. These 2 guys combined make it even better!! Bravo to python devs
+            #OH MY GOD NOT IS HERE AS WELL. GODAYAMMMMMMM. These 2 guys combined make it even better!! 
 
             if unfamiliar_skill not in skills.lower():
 
             #So because we wanted to access the <a href> tag within the header statement we just stated it.
             #It was inside the header which had a h2 which had 'a' which had the attribute 'href' which we wanted
-            #Next we used the [] to call the href attribute. THis prints only the value of href which is what we want
+            #Next we used the [] brackets to call the href attribute. THis prints only the value of href which is what we want
 
                 with open(f'listings/{index}.txt', 'w') as f:
                     f.write(f'Company name: {company_name.strip()}')
