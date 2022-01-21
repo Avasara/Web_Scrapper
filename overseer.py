@@ -2,11 +2,10 @@ import time
 from bs4 import BeautifulSoup
 import requests
 
+#Any skill entered here will be filtered out of the program.
 
-
-
-unfamiliar_skill = input('Enter skills you do not possess>')
-print(f'Filtering out {unfamiliar_skill}')
+unknown_skill = input('Enter skills you do not possess>')
+print(f'Filtering out {unknown_skill}')
 print(' ')
 
 def findJobs():
@@ -32,7 +31,7 @@ def findJobs():
 
             #OH MY GOD NOT IS HERE AS WELL. GODAYAMMMMMMM. These 2 guys combined make it even better!! 
 
-            if unfamiliar_skill not in skills.lower():
+            if unknown_skill not in skills.lower():
 
             #So because we wanted to access the <a href> tag within the header statement we just stated it.
             #It was inside the header which had a h2 which had 'a' which had the attribute 'href' which we wanted
