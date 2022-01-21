@@ -1,0 +1,8 @@
+You use 'with open('web.html' , 'r')' when you want to use python to open a file. The web.html is the path and if the file is in a separate file from the python file, then you need to specify the path. The r stands for read meaning it should only read the contents of the web.html file. 
+
+You can find a specific thing in a website by using the find function. e.g tags = soup.find('h5'). This finds all lines with h5 in them and saves it to the tags variable. This only finds one line with the h5 request though. It stops the program once one is found. In order to find all instances of the h5 tag, you need to say find_all.
+
+for ife in courses_html_tags:
+print(ife.text)
+
+Something interesting at least in my opinion happens in this code above. The ife variable in the for loop takes in the courses_html_tags as its input but then when i say to print out ife.text, it prints out only the text within the courses_html_tags file. Oh so new info the text looks for the text part of the tag. It prints out the html tag normally without the text tag but with the text tag, it only prints out the text part of it to us. It also prints out the tags themselves. e.g replace text with h5, a etc Remember to always put in the text tag at the end though when using the tags. This is so you get a cleaner look
